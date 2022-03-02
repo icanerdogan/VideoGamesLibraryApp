@@ -9,10 +9,30 @@
         android:id="@+id/homeFragment"
         android:name="com.icanerdogan.videogameslibrary.view.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailGameFragment"
+            app:destination="@id/detailGameFragment" >
+            <argument
+                android:name="BasicGameID"
+                app:argType="integer"
+                android:defaultValue="0" />
+        </action>
+
+    </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.icanerdogan.videogameslibrary.view.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/detailGameFragment"
+        android:name="com.icanerdogan.videogameslibrary.view.DetailGameFragment"
+        android:label="fragment_detail_game"
+        tools:layout="@layout/fragment_detail_game" >
+
+        <argument android:name="DetailGameID"
+            app:argType="integer" />
+    </fragment>
 </navigation>

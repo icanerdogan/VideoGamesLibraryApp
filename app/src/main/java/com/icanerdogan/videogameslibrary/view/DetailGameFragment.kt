@@ -5,19 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.icanerdogan.videogameslibrary.databinding.FragmentFavoritesBinding
+import com.icanerdogan.videogameslibrary.R
 
 
-class FavoritesFragment : Fragment() {
-    private lateinit var favoritesBinding: FragmentFavoritesBinding
+class DetailGameFragment : Fragment() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        favoritesBinding = FragmentFavoritesBinding.inflate(inflater, container, false)
-        return favoritesBinding.root
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_detail_game, container, false)
     }
-
 
 }

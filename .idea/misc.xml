@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1355" />
+        <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/drawable/ic_baseline_videogame_asset_24.xml" value="0.1555" />
         <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/drawable/ic_heart.xml" value="0.1" />
         <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/drawable/ic_home.xml" value="0.1415" />
         <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/layout/activity_main.xml" value="0.17119565217391305" />
+        <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/layout/activity_splash_screen.xml" value="0.17119565217391305" />
         <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/layout/fragment_blank.xml" value="0.1" />
+        <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/layout/fragment_detail_game.xml" value="0.1796875" />
         <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/layout/fragment_favorites.xml" value="0.1" />
-        <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/layout/fragment_home.xml" value="0.11730072463768115" />
+        <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/layout/fragment_home.xml" value="0.17119565217391305" />
+        <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/layout/row_layout.xml" value="0.17119565217391305" />
         <entry key="..\:/Users/ibrahim.erdogan/OneDrive - Logo/Documents/Code/Kotlin/Projects/VideoGamesLibrary/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
       </map>
     </option>

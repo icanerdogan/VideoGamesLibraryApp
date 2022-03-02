@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="basicgame"
+            type="com.icanerdogan.videogameslibrary.model.BasicGame" />
+        <variable
+            name="listener"
+            type="com.icanerdogan.videogameslibrary.adapter.GameClickListener"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:onClick="@{listener::onGameClicked}"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/rowLayoutGameID"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@{basicgame.basicGameID}"
+            android:visibility="gone">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3">
+
+            <ImageView
+                android:id="@+id/rowLayoutGameImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:downloadURL="@{basicgame.basicGameImageURL}"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher">
+            </ImageView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rowLayoutGameName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:hint="@string/game_name"
+                android:text="@{basicgame.basicGameName}"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rowLayoutGameRating"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:hint="@string/game_rating"
+                    android:text="@{basicgame.basicGameRating.toString()}"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/rowLayoutGameReleased"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:hint="@string/game_released"
+                    android:text="@{basicgame.basicGameReleased}"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+                </TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
