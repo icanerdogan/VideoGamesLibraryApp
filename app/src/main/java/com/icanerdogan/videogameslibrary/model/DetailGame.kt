@@ -1,6 +1,5 @@
 package com.icanerdogan.videogameslibrary.model
 
-import android.content.ClipDescription
 import com.google.gson.annotations.SerializedName
 
 data class DetailGame(

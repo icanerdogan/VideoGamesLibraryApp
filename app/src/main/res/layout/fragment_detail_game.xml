@@ -1,84 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".view.DetailGameFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="detailgame"
+            type="com.icanerdogan.videogameslibrary.model.DetailGame" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.4">
-        <ImageView
-            android:id="@+id/detailGameImageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
-            android:src="@color/material_dynamic_secondary30"/>
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.DetailGameFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1">
-        <TextView
-            android:id="@+id/detailGameTextViewName"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Game Name"
-            android:textSize="30sp"
-            android:fontFamily="monospace"
-            android:textColor="@color/black"
-            android:gravity="center_vertical"
-            android:padding="10dp"/>
-    </LinearLayout>
+            android:layout_height="0dp"
+            android:layout_weight="0.4">
+            <ImageView
+                android:id="@+id/detailGameImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:downloadURL="@{detailgame.detailGameImageURL}"
+                tools:src="@color/material_dynamic_secondary30"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.05">
-        <TextView
-            android:id="@+id/detailGameTextViewReleaseDate"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Game Released Date"
-            android:textSize="20sp"
-            android:fontFamily="monospace"
-            android:textColor="@color/black"
-            android:gravity="center_vertical"
-            android:paddingStart="10dp"/>
-    </LinearLayout>
+            android:layout_height="0dp"
+            android:layout_weight="0.1">
+            <TextView
+                android:id="@+id/detailGameTextViewName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Game Name"
+                android:text="@{detailgame.detailGameName.toString()}"
+                android:textSize="30sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:padding="10dp"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.05">
-
-        <TextView
-            android:id="@+id/detailGameTextViewMetacritic"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Game Metacritic Rate"
-            android:textSize="20sp"
-            android:fontFamily="monospace"
-            android:textColor="@color/black"
-            android:gravity="center_vertical"
-            android:paddingStart="10dp"/>
-    </LinearLayout>
+            android:layout_height="0dp"
+            android:layout_weight="0.05">
+            <TextView
+                android:id="@+id/detailGameTextViewReleaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Game Released Date"
+                android:text="@{detailgame.detailGameReleased.toString()}"
+                android:textSize="20sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5">
-        <TextView
-            android:id="@+id/detailGameTextViewDescription"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Description"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif"
-            android:textColor="@color/black"
-            android:padding="10dp"/>
+            android:layout_height="0dp"
+            android:layout_weight="0.05">
+
+            <TextView
+                android:id="@+id/detailGameTextViewMetacritic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Game Metacritic Rate"
+                android:text="@{detailgame.detailGameMetacritic.toString()}"
+                android:textSize="20sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+            <TextView
+                android:id="@+id/detailGameTextViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@{detailgame.detailGameDescription.toString()}"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:padding="10dp"/>
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</layout>

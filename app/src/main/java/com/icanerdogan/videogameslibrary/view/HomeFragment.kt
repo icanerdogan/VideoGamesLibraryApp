@@ -36,13 +36,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        // Recycler View
         recyclerView = homeBinding.recyclerViewGames
         recyclerView?.layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.VERTICAL, false)
         recyclerView?.adapter = gameAdapter
 
+        // View Model
         basicGameViewModel = ViewModelProvider(this).get(BasicGameViewModel::class.java)
-
         basicGameViewModel.games.observe(viewLifecycleOwner, object : Observer<BaseGame>{
             override fun onChanged(t: BaseGame?) {
                 t?.let {
@@ -50,9 +50,6 @@ class HomeFragment : Fragment() {
                 }
             }
         })
-        //homeBinding.recyclerViewGames.layoutManager = LinearLayoutManager(context)
-        //homeBinding.recyclerViewGames.adapter = gameAdapter
-
         basicGameViewModel.getAllGamesHomeScreen()
 
     }

@@ -1,6 +1,7 @@
 package com.icanerdogan.videogameslibrary.service
 
 import com.icanerdogan.videogameslibrary.model.BaseGame
+import com.icanerdogan.videogameslibrary.model.DetailGame
 import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.Retrofit
@@ -20,5 +21,9 @@ class APIService {
 
     fun getAllGames() : Single<BaseGame>{
         return api.getAllGames()
+    }
+
+    fun getOneGamesWithID(clickedGameID : Int) : Single<DetailGame>{
+        return api.getOneGamesWithID(clickedGameID)
     }
 }
