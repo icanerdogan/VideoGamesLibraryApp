@@ -23,13 +23,13 @@ GameClickListener{
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.rowLayoutBinding.basicgame = gameList.baseGameResults[position]
+        holder.rowLayoutBinding.basicgame = gameList.baseGameResults[position + 3]
         holder.rowLayoutBinding.listener = this
 
     }
 
     override fun getItemCount(): Int {
-        return gameList.baseGameResults.size
+        return gameList.baseGameResults.size - 3
     }
 
     override fun onGameClicked(v: View) {

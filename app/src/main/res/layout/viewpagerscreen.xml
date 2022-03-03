@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewpagergame"
+            type="com.icanerdogan.videogameslibrary.model.BasicGame" />
+        <variable
+            name="listener"
+            type="com.icanerdogan.videogameslibrary.adapter.GameClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="@{listener::onGameClicked}">
+        <TextView
+            android:id="@+id/viewPagerGameID"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@{viewpagergame.basicGameID.toString()}"
+            android:visibility="gone">
+        </TextView>
+        <ImageView
+            android:id="@+id/ImageViewPagerPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:downloadURL="@{viewpagergame.basicGameImageURL}">
+        </ImageView>
+    </LinearLayout>
+</layout>
