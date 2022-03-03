@@ -13,7 +13,7 @@ import io.reactivex.schedulers.Schedulers
 class BasicGameViewModel : ViewModel() {
     private val apiService = APIService()
     private val disposable = CompositeDisposable()
-    //val games = MutableLiveData<BaseGame>()
+    val games = MutableLiveData<BaseGame>()
 
     fun getAllGamesHomeScreen(){
         disposable.add(apiService.getAllGames()
@@ -21,8 +21,7 @@ class BasicGameViewModel : ViewModel() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeWith(object : DisposableSingleObserver<BaseGame>(){
                 override fun onSuccess(t: BaseGame) {
-                    // BASE MODEL VIEW'A BAĞLANACAK!
-                    println("Success!")
+                    return games.postValue(t)
                 }
 
                 override fun onError(e: Throwable) {

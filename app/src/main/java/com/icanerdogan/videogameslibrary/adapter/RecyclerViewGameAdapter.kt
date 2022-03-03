@@ -12,7 +12,7 @@ import com.icanerdogan.videogameslibrary.model.BaseGame
 import com.icanerdogan.videogameslibrary.view.HomeFragment
 import com.icanerdogan.videogameslibrary.view.HomeFragmentDirections
 
-class RecyclerViewGameAdapter (val gameList : BaseGame):
+class RecyclerViewGameAdapter (var gameList : BaseGame):
 RecyclerView.Adapter<RecyclerViewGameAdapter.ViewHolder>(),
 GameClickListener{
 
@@ -38,6 +38,10 @@ GameClickListener{
         val action = HomeFragmentDirections.actionHomeFragmentToDetailGameFragment(clickedGameID)
         Navigation.findNavController(v).navigate(action)
 
+    }
+    fun updatGameList(gameList : BaseGame){
+        this.gameList = gameList
+        notifyDataSetChanged()
     }
 
 }
