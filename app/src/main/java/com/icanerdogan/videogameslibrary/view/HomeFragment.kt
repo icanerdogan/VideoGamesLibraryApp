@@ -9,7 +9,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.icanerdogan.videogameslibrary.adapter.RecyclerViewGameAdapter
 import com.icanerdogan.videogameslibrary.adapter.ViewPagerAdapter
@@ -20,15 +19,16 @@ import com.icanerdogan.videogameslibrary.viewmodel.BasicGameViewModel
 
 class HomeFragment : Fragment() {
     private var recyclerView: RecyclerView? = null
-    private var viewPager : ViewPager2? = null
-
     private lateinit var homeBinding: FragmentHomeBinding
-
     private lateinit var basicGameViewModel: BasicGameViewModel
 
     private val baseGame = BaseGame(arrayListOf())
     private val gameAdapter = RecyclerViewGameAdapter(baseGame)
+
+    // View Pager2
     private val viewPagerAdapter = ViewPagerAdapter(baseGame)
+    private var viewPager : ViewPager2? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,6 +49,7 @@ class HomeFragment : Fragment() {
         //View Pager
         viewPager = homeBinding.viewPagerGames
         viewPager?.adapter = viewPagerAdapter
+
 
         // View Model
         basicGameViewModel = ViewModelProvider(this).get(BasicGameViewModel::class.java)
