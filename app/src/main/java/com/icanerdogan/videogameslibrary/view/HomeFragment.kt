@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
+import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -53,6 +55,7 @@ class HomeFragment : Fragment() {
 
         // View Model
         basicGameViewModel = ViewModelProvider(this).get(BasicGameViewModel::class.java)
+
         basicGameViewModel.games.observe(viewLifecycleOwner, object : Observer<BaseGame>{
             override fun onChanged(t: BaseGame?) {
                 t?.let {
@@ -61,6 +64,7 @@ class HomeFragment : Fragment() {
                 }
             }
         })
+
         basicGameViewModel.getAllGamesHomeScreen()
 
     }

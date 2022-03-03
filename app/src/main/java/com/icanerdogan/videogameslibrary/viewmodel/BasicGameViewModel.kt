@@ -3,6 +3,7 @@ package com.icanerdogan.videogameslibrary.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.icanerdogan.videogameslibrary.model.BaseGame
+import com.icanerdogan.videogameslibrary.model.BasicGame
 import com.icanerdogan.videogameslibrary.service.APIService
 import com.icanerdogan.videogameslibrary.service.GameService
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -21,7 +22,7 @@ class BasicGameViewModel : ViewModel() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeWith(object : DisposableSingleObserver<BaseGame>(){
                 override fun onSuccess(t: BaseGame) {
-                    return games.postValue(t)
+                    games.postValue(t)
                 }
 
                 override fun onError(e: Throwable) {
@@ -31,5 +32,4 @@ class BasicGameViewModel : ViewModel() {
             })
         )
     }
-
 }

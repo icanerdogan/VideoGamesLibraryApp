@@ -53,10 +53,10 @@
                 android:layout_weight="0.5"
                 android:hint="@string/game_name"
                 android:text="@{basicgame.basicGameName}"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:textColor="@color/black"
-                android:gravity="center_vertical"
-                android:padding="10dp">
+                android:gravity="bottom"
+                android:padding="5dp">
             </TextView>
 
             <LinearLayout
@@ -72,10 +72,10 @@
                     android:layout_weight="0.5"
                     android:hint="@string/game_rating"
                     android:text="@{basicgame.basicGameRating.toString()}"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textColor="@color/black"
-                    android:gravity="center_vertical"
-                    android:padding="10dp">
+                    android:layout_gravity="start"
+                    android:padding="5dp">
                 </TextView>
 
                 <TextView
@@ -85,10 +85,10 @@
                     android:layout_weight="0.5"
                     android:hint="@string/game_released"
                     android:text="@{basicgame.basicGameReleased}"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textColor="@color/black"
-                    android:gravity="center_vertical"
-                    android:padding="10dp">
+                    android:layout_gravity="start"
+                    android:padding="5dp">
                 </TextView>
 
             </LinearLayout>

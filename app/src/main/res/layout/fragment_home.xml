@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".view.HomeFragment">
 
-    <LinearLayout
+    <!--<androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/searchview_background"
+        android:padding="5dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Game Name">
 
-        <EditText
-            android:id="@+id/editTextSearch"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:drawableRight="@drawable/ic_baseline_search_24"
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+    </androidx.appcompat.widget.SearchView>-->
 
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,8 +29,8 @@
             android:id="@+id/viewPagerGames"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:padding="5dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -45,8 +43,8 @@
             android:id="@+id/recyclerViewGames"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:padding="5dp" />
 
     </LinearLayout>
 </LinearLayout>
