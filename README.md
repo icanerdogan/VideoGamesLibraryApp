@@ -2,6 +2,7 @@
 
 <h3 align="center"><b> 4th Week in Logo Yazılım (@logo-group) Intership </b></h3>
 
-<p align="center">
-<img src="images/banner.png" ></img>
-</p>
+
+Splash Screen        |  Home Fragment  
+:-------------------------:|:-------------------------:
+![](images/splash.png)  |  ![](images/homefragment.png) 
