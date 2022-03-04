@@ -31,7 +31,6 @@ class HomeFragment : Fragment() {
     private val viewPagerAdapter = ViewPagerAdapter(baseGame)
     private var viewPager : ViewPager2? = null
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -53,7 +52,7 @@ class HomeFragment : Fragment() {
         viewPager?.adapter = viewPagerAdapter
 
 
-        // View Model
+        // Basic View Model
         basicGameViewModel = ViewModelProvider(this).get(BasicGameViewModel::class.java)
 
         basicGameViewModel.games.observe(viewLifecycleOwner, object : Observer<BaseGame>{
@@ -66,6 +65,7 @@ class HomeFragment : Fragment() {
         })
 
         basicGameViewModel.getAllGamesHomeScreen()
+
 
     }
 

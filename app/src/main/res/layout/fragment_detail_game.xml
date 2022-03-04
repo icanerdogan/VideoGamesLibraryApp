@@ -6,6 +6,9 @@
         <variable
             name="detailgame"
             type="com.icanerdogan.videogameslibrary.model.DetailGame" />
+        <variable
+            name="listener"
+            type="com.icanerdogan.videogameslibrary.adapter.GameClickListener"/>
     </data>
 
     <LinearLayout
@@ -13,19 +16,36 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".view.DetailGameFragment">
+        <TextView
+            android:id="@+id/detailFragmentGameID"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@{detailgame.detailGameID.toString()}"
+            android:visibility="gone">
+        </TextView>
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.4">
+            <Button
+                android:id="@+id/detailGameFavoriteButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:onClick="@{listener::onGameClicked}"
+                android:background="@drawable/ic_baseline_favorite_24"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="5dp">
+            </Button>
+
             <ImageView
                 android:id="@+id/detailGameImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitCenter"
                 android:downloadURL="@{detailgame.detailGameImageURL}"
-                tools:src="@color/material_dynamic_secondary30"/>
-        </LinearLayout>
+                android:scaleType="fitXY"
+                tools:src="@color/material_dynamic_secondary30" />
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

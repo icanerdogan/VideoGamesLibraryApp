@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.icanerdogan.videogameslibrary.databinding.FragmentFavoritesBinding
 
-
 class FavoritesFragment : Fragment() {
     private lateinit var favoritesBinding: FragmentFavoritesBinding
 
@@ -19,5 +18,8 @@ class FavoritesFragment : Fragment() {
         return favoritesBinding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+    }
 }

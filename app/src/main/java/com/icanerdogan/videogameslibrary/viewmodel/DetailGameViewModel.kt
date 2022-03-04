@@ -24,7 +24,6 @@ class DetailGameViewModel : ViewModel() {
                 override fun onSuccess(t: DetailGame) {
                    return detailGameLiveData.postValue(t)
                 }
-
                 override fun onError(e: Throwable) {
                     println("Wrong : ${e.printStackTrace()}")
                 }

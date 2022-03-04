@@ -29,7 +29,6 @@ class ViewPagerAdapter(var baseGameList : BaseGame) : RecyclerView.Adapter<ViewP
 
     override fun onBindViewHolder(holder: ViewPagerAdapter.Page2ViewHolder, position: Int) {
         holder.viewpagerscreenBinding.viewpagergame = baseGameList.baseGameResults[position]
-
     }
 
     override fun getItemCount(): Int {

@@ -24,7 +24,18 @@
         android:id="@+id/favoritesFragment"
         android:name="com.icanerdogan.videogameslibrary.view.FavoritesFragment"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <argument
+            android:name="favoriteGamesID"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+        <action
+            android:id="@+id/action_favoritesFragment_to_detailGameFragment"
+            app:destination="@id/detailGameFragment" >
+        </action>
+
+    </fragment>
 
     <fragment
         android:id="@+id/detailGameFragment"
@@ -34,8 +45,19 @@
 
         <argument android:name="DetailGameID"
             app:argType="integer" />
+
         <action
             android:id="@+id/action_detailGameFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment" >
+
+        </action>
+
+        <action
+            android:id="@+id/action_detailGameFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" >
+            <argument android:name="DetailFavoriteGameID"
+                app:argType="integer" />
+        </action>
+
     </fragment>
 </navigation>
