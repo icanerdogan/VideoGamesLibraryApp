@@ -9,12 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.icanerdogan.videogameslibrary.R
 import com.icanerdogan.videogameslibrary.databinding.RowLayoutBinding
 import com.icanerdogan.videogameslibrary.model.BaseGame
-import com.icanerdogan.videogameslibrary.view.HomeFragment
 import com.icanerdogan.videogameslibrary.view.HomeFragmentDirections
 
 class RecyclerViewGameAdapter (var gameList : BaseGame):
-RecyclerView.Adapter<RecyclerViewGameAdapter.ViewHolder>(),
-GameClickListener{
+    RecyclerView.Adapter<RecyclerViewGameAdapter.ViewHolder>(),
+    GameClickListener{
 
     class ViewHolder(val rowLayoutBinding: RowLayoutBinding) : RecyclerView.ViewHolder(rowLayoutBinding.root) {}
 

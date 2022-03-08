@@ -2,33 +2,33 @@ package com.icanerdogan.videogameslibrary.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.icanerdogan.videogameslibrary.model.BaseGame
-import com.icanerdogan.videogameslibrary.model.BasicGame
+import com.icanerdogan.videogameslibrary.model.DetailGame
+import com.icanerdogan.videogameslibrary.model.FavoriteGame
 import com.icanerdogan.videogameslibrary.service.APIService
-import com.icanerdogan.videogameslibrary.service.GameService
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 
-class BasicGameViewModel : ViewModel() {
+class FavoriteGameViewModel : ViewModel() {
     private val apiService = APIService()
     private val disposable = CompositeDisposable()
-    val games = MutableLiveData<BaseGame>()
 
-    fun getAllGamesHomeScreen(){
-        disposable.add(apiService.getAllGames()
+    val favoriteGameLiveData = MutableLiveData<FavoriteGame>()
+
+    fun getFavoriteDataFromAPI(favoriteGameID : Int){
+        disposable.add(apiService.addFavoriteWithID(favoriteGameID)
             .subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribeWith(object : DisposableSingleObserver<BaseGame>(){
-                override fun onSuccess(t: BaseGame) {
-                    games.postValue(t)
+            .subscribeWith(object : DisposableSingleObserver<FavoriteGame>(){
+                override fun onSuccess(t: FavoriteGame) {
+                    favoriteGameLiveData.postValue(t)
                 }
                 override fun onError(e: Throwable) {
-                    println("Wrong : ${e.printStackTrace()}")
+                    println("Wrong : ${e}")
                 }
-
             })
         )
     }
+
 }

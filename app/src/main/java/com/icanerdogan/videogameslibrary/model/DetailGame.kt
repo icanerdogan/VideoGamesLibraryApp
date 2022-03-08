@@ -11,8 +11,10 @@ data class DetailGame(
     val detailGameReleased : String?,
     @SerializedName("metacritic")
     val detailGameMetacritic : String?,
+    @SerializedName("rating")
+    val detailGameRating : Double?,
     @SerializedName("background_image")
     val detailGameImageURL : String?,
     @SerializedName("description")
-    val detailGameDescription : String?
+    val detailGameDescription : String?,
 )

@@ -33,6 +33,7 @@
         <action
             android:id="@+id/action_favoritesFragment_to_detailGameFragment"
             app:destination="@id/detailGameFragment" >
+
         </action>
 
     </fragment>
@@ -55,7 +56,7 @@
         <action
             android:id="@+id/action_detailGameFragment_to_favoritesFragment"
             app:destination="@id/favoritesFragment" >
-            <argument android:name="DetailFavoriteGameID"
+            <argument android:name="favoriteGamesID"
                 app:argType="integer" />
         </action>
 

@@ -12,7 +12,6 @@ import io.reactivex.schedulers.Schedulers
 class DetailGameViewModel : ViewModel() {
     private val apiService = APIService()
     private val disposable = CompositeDisposable()
-    //private var getClickedBasicGameID : Int = 0
 
     val detailGameLiveData = MutableLiveData<DetailGame>()
 

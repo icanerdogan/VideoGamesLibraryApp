@@ -19,10 +19,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.icanerdogan.videogameslibrary.R
 import com.icanerdogan.videogameslibrary.databinding.ActivityMainBinding
+import com.icanerdogan.videogameslibrary.model.DetailGame
+import com.icanerdogan.videogameslibrary.model.FavoriteGame
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
-
+    lateinit var favoriteGameList : ArrayList<DetailGame>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +32,11 @@ class MainActivity : AppCompatActivity() {
         val view = mainBinding.root
         setContentView(view)
 
+        favoriteGameList = ArrayList()
+
         val navController = findNavController(R.id.fragmentContainerView)
         val bottomNavigationView = mainBinding.bottomNavigationView
         bottomNavigationView.setupWithNavController(navController)
         }
+
 }

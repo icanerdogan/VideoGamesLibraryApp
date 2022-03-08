@@ -23,7 +23,13 @@
             android:text="@{detailgame.detailGameID.toString()}"
             android:visibility="gone">
         </TextView>
-
+        <TextView
+            android:id="@+id/detailFragmentGameRating"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@{detailgame.detailGameRating.toString()}"
+            android:visibility="gone">
+        </TextView>
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -32,7 +38,6 @@
                 android:id="@+id/detailGameFavoriteButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:onClick="@{listener::onGameClicked}"
                 android:background="@drawable/ic_baseline_favorite_24"
                 android:layout_gravity="end|bottom"
                 android:layout_margin="5dp">
