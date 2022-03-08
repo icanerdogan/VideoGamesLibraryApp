@@ -67,6 +67,15 @@ dependencies {
     def lifeCycleExtensionVersion = '1.1.1'
     implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionVersion"
 
+    //ROOM
+
+    def room_version = "2.4.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    implementation "androidx.room:room-guava:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+    implementation "androidx.room:room-paging:2.5.0-alpha01"
 
     // RETROFIT
 

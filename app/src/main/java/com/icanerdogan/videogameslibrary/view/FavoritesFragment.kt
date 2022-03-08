@@ -5,21 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.icanerdogan.videogameslibrary.adapter.FavoriteGameAdapter
-import com.icanerdogan.videogameslibrary.databinding.FavoritesRowLayoutBinding
 import com.icanerdogan.videogameslibrary.databinding.FragmentFavoritesBinding
-import com.icanerdogan.videogameslibrary.model.FavoriteGame
-import com.icanerdogan.videogameslibrary.viewmodel.FavoriteGameViewModel
 
 class FavoritesFragment : Fragment() {
     private lateinit var favoritesBinding: FragmentFavoritesBinding
     private var favoritesGameRecyclerView: RecyclerView? = null
-    private lateinit var favoriteGameViewModel : FavoriteGameViewModel
 
     private var getFavoriteDetailGameID : Int = 0
     private lateinit var favoriteAdapter : FavoriteGameAdapter

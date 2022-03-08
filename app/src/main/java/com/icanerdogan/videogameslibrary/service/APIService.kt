@@ -2,7 +2,6 @@ package com.icanerdogan.videogameslibrary.service
 
 import com.icanerdogan.videogameslibrary.model.BaseGame
 import com.icanerdogan.videogameslibrary.model.DetailGame
-import com.icanerdogan.videogameslibrary.model.FavoriteGame
 import io.reactivex.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -26,7 +25,7 @@ class APIService {
         return api.getOneGamesWithID(clickedGameID)
     }
 
-    fun addFavoriteWithID(clickedGameID : Int) : Single<FavoriteGame>{
+/*    fun addFavoriteWithID(clickedGameID : Int) : Single<FavoriteGame>{
         return api.getFavoriteGamesWithID(clickedGameID)
-    }
+    }*/
 }

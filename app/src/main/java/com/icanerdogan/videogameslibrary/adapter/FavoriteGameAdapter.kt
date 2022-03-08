@@ -1,12 +1,10 @@
 package com.icanerdogan.videogameslibrary.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.icanerdogan.videogameslibrary.databinding.FavoritesRowLayoutBinding
 import com.icanerdogan.videogameslibrary.model.DetailGame
-import com.icanerdogan.videogameslibrary.model.FavoriteGame
 import com.icanerdogan.videogameslibrary.view.FavoritesFragment
 
 class FavoriteGameAdapter(val context: FavoritesFragment, var favoriteGameList: ArrayList<DetailGame>):
